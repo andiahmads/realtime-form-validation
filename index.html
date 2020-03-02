@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation by endi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="form-section">
+		<h1><center>Form Validation java script dan jquery</center></h1>
+		<div class="border"></div>
+		<form class="contact-form" name="myForm" action="index.html" method="post">
+			<input type="text" class="contact-form-text" name="name" id="Name" placeholder="enter your name" oninput="validateFirstName()" onfocusout="validateFirstName()">
+			<span></span>
+			<input type="text" class="contact-form-text" name="username" id="UserName" placeholder="enter your UserName" oninput="validateLastName()" onfocusout="validateLastName()">
+			<span></span>
+
+			<input type="email" class="contact-form-text"  name="email" id="Email" placeholder="enter your Email" oninput="validateEmail()" onfocusout="validateEmail()">
+			<span></span>
+
+			<input type="password" class="contact-form-text" name="password" id="Password" placeholder="enter your password" oninput="validatePassword()" onfocusout="validatePassword()">
+			<span></span>
+
+
+			<button type="submit" class="contact-form-btn" name="buttonDisabled" id="snbbutton">Submit</button>
+		</form>
+
+	</div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+
+	<script type="text/javascript" src="custom.js"></script>
+	<script type="text/javascript" src="snbutton.js"></script>
+	<script>
+			 $('').ready(function () {
+    SNButton.init("snbbutton",{
+        fields: ["Name","UserName","Email","Password"],
+        disabletext:'disabled'
+    });
+});
+	</script>
+
+
+</body>
+</html>
